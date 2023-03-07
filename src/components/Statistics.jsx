@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types'
 import { Notification } from "./Notification";
 
-export const Statistics = ({ state: { good, neutral, bad } }) => {
+export const Statistics = ({ good, neutral, bad }) => {
+    // console.log(good+neutral+bad);
     let countTotalFeedback = () => good + neutral + bad;
     let countPositiveFeedbackPercentage = () => Math.ceil((good + neutral) * 100 / (countTotalFeedback()));
    
